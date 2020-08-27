@@ -20,7 +20,7 @@ public class MessageRepositoryTest {
 
     @Test
     public void savesMessage() {
-        Message message = Message.builder().build();
+        Message message = Message.builder().userId(1L).text("I post clever thought").build();
         Message saved = repository.save(message);
         assertNotNull(saved.getId());
     }
